@@ -1,0 +1,16 @@
+export const ROUTES = {
+  HOME: "/",
+  PRODUCTS: "/productos",
+  PRODUCT_DETAIL: "/productos/:id",
+  LOGIN: "/login",
+  REGISTER: "/registro",
+  FORGOT_PASSWORD: "/recuperar-contrasena",
+  RESET_PASSWORD: "/restablecer-contrasena",
+  CART: "/carrito",
+  PROFILE: "/perfil",
+  PROVIDER: "/proveedor",
+  PROVIDER_PRODUCTS: "/proveedor/productos",
+  PROVIDER_NEW: "/proveedor/productos/nuevo",
+  PROVIDER_EDIT: "/proveedor/productos/:id/editar",
+  NOT_FOUND: "*",
+};

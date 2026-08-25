@@ -1,0 +1,16 @@
+.wrap {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-surface);
+  padding: 2rem 1rem;
+}
+
+.panel {
+  width: min(100%, 480px);
+}
+
+.panelWide {
+  width: min(100%, 760px);
+}

@@ -1,0 +1,11 @@
+.page { padding: 2rem 0 3rem; }
+.head { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+.link { text-decoration: underline; }
+.form { margin-top: 1.5rem; display: grid; gap: 1rem; }
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.orders { margin-top: 2.5rem; }
+.orderList { list-style: none; padding: 0; margin: 1rem 0 0; display: grid; gap: 0.65rem; }
+.orderList li { display: grid; grid-template-columns: repeat(3, 1fr); padding: 0.75rem; border: 1px solid var(--color-border); border-radius: var(--radius-sm); }
+.ok { color: #1b5e20; }
+.error { color: #b00020; }
+@media (max-width: 640px) { .grid { grid-template-columns: 1fr; } }

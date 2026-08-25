@@ -1,0 +1,52 @@
+.section {
+  padding: 2.5rem 0;
+  
+}
+
+.sectionHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+  height: auto;
+}
+
+.sectionHead h2 {
+  margin: 0;
+  font-size: 1.35rem;
+}
+
+.link {
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+
+.categories {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+@media (max-width: 1024px) {
+  .categories {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .categories,
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

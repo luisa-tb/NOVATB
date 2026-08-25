@@ -1,0 +1,87 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.imageWrap {
+  position: relative;
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  aspect-ratio: 1;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.wish {
+  position: absolute;
+  top: 0.65rem;
+  right: 0.65rem;
+  border: none;
+  background: #fff;
+  border-radius: 999px;
+  width: 2rem;
+  height: 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.wish.active {
+  color: #111;
+  fill: #111;
+}
+
+/* .name {
+  font-weight: 600;
+} */
+
+.name {
+  font-weight:500;
+  font-size: 16px;
+  font-family: 'Inter','Roboto';
+  color:#1D1D1D;
+}
+
+/* .price {
+  margin: 0.25rem 0 0;
+  color: var(--color-text-muted);
+} */
+
+.price{
+  font-size: 22px;
+  font-weight: 700;
+  color:#000000;
+}
+
+@media (max-width: 480px) {
+  .card {
+    gap: 0.5rem;
+  }
+
+  .imageWrap {
+    border-radius: var(--radius-sm, 8px);
+  }
+
+  .wish {
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+
+  .name {
+    font-size: 13px;
+  }
+
+  .price {
+    font-size: 16px;
+  }
+}
+
