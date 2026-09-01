@@ -11,7 +11,7 @@ const crearProducto = async (
   id_proveedor,
 ) => {
   const query = `
-    INSERT INTO Productos (nombre, descripcion, precio, stock, imagen, estado, id_categoria, id_proveedor)
+    INSERT INTO productos (nombre, descripcion, precio, stock, imagen, estado, id_categoria, id_proveedor)
     VALUES (?, ?, ?, ?, ?, ?, ?, ?)
   `;
 
@@ -32,7 +32,7 @@ const crearProducto = async (
 const buscarproductoid = async (id_producto) => {
   const query = `
     SELECT id_producto, nombre, descripcion, precio, stock, imagen, estado, id_categoria, id_proveedor
-    FROM Productos
+    FROM productos
     WHERE id_producto = ?
   `;
 
@@ -59,7 +59,7 @@ const actualizarProducto = async (id_producto, datos) => {
   } = datos;
 
   const [resultado] = await pool.query(
-    "UPDATE Productos SET nombre = ?, descripcion = ?, precio = ?, stock = ?, imagen = ?, id_categoria = ?, id_proveedor = ? WHERE id_producto = ?",
+    "UPDATE productos SET nombre = ?, descripcion = ?, precio = ?, stock = ?, imagen = ?, id_categoria = ?, id_proveedor = ? WHERE id_producto = ?",
     [
       nombre,
       descripcion,
@@ -86,7 +86,7 @@ const cambiarEstadoProducto = async (id_producto, estado) => {
 
 const eliminarProducto = async (id_producto) => {
   const [resultado] = await pool.query(
-    "DELETE FROM Productos WHERE id_producto = ?",
+    "DELETE FROM productos WHERE id_producto = ?",
     [id_producto],
   );
 
